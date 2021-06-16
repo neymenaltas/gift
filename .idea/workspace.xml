@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51bf7d2d-6b0d-4cb6-93c5-f340affe1281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gift.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/APIUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/CacheHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/ProductsAPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AcceptanceModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Attributes.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Carousel.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ChangeThemeModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dropdown.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/InputsArea.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Products.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Spinner.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WelcomeModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/ProductStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/ThemeStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/ThemeName.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="51bf7d2d-6b0d-4cb6-93c5-f340affe1281" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
