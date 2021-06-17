@@ -226,6 +226,14 @@ const Products = ({ match }) => {
     );
   };
 
+  const renderNoProductFound = () => {
+    return (
+      <ProductArea>
+        <NoProductSpan>No products found</NoProductSpan>
+      </ProductArea>
+    );
+  };
+
   return (
     <ProductsPageContainer>
       {showWelcomeModal && renderWelcomeModal()}
@@ -245,11 +253,7 @@ const Products = ({ match }) => {
         </div>
       )}
 
-      {!products.length && loaded && (
-        <ProductArea>
-          <NoProductSpan>No products found</NoProductSpan>
-        </ProductArea>
-      )}
+      {!products.length && loaded && renderNoProductFound()}
 
       {products.length && loaded ? (
         <ProductArea>
