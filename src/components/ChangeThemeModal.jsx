@@ -76,6 +76,14 @@ const DoneButton = styled("button")`
   margin-top: 12px;
 `;
 
+const SmallerText = styled("span")`
+  font-size: 12px;
+`;
+
+const BiggerText = styled("span")`
+  font-size: 32px;
+`;
+
 const ChangeThemeModal = (props) => {
   const { toggleModal } = props;
 
@@ -100,7 +108,7 @@ const ChangeThemeModal = (props) => {
         <span>Manage your font size, color and background.</span>
       </ExampleText>
       <SlideContainer>
-        <h6>AA</h6>
+        <SmallerText>AA</SmallerText>
         <Slide
           onChange={(e) => handleRangeChange(e)}
           type="range"
@@ -110,7 +118,7 @@ const ChangeThemeModal = (props) => {
           value={rangeValue}
           className="slider"
         />
-        <h1>AA</h1>
+        <BiggerText>AA</BiggerText>
       </SlideContainer>
       <div>
         <LightButton onClick={() => setTheme(ThemeNameEnums.LIGHT)}>

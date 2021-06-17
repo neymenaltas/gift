@@ -1,6 +1,6 @@
 import "./App.css";
 import { ProductsProvider } from "./context/ProductStore";
-import Products from "./components/Products";
+import Products from "./pages/Products";
 import Header from "./components/Header";
 import { ThemeStore } from "./context/ThemeStore";
 import { BrowserRouter as Router, Route } from "react-router-dom";

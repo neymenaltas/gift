@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { getProducts } from "../api/ProductsAPI";
 import useProducts from "../context/ProductStore";
-import Attributes from "./Attributes";
+import Attributes from "../components/Attributes";
 import styled from "styled-components";
-import Modal from "./Modal";
-import AcceptanceModal from "./AcceptanceModal";
-import WelcomeModal from "./WelcomeModal";
-import InputsArea from "./InputsArea";
-import Spinner from "./Spinner";
-import Carousel from "./Carousel";
+import Modal from "../components/Modal";
+import AcceptanceModal from "../components/AcceptanceModal";
+import WelcomeModal from "../components/WelcomeModal";
+import InputsArea from "../components/InputsArea";
+import Spinner from "../components/Spinner";
+import Carousel from "../components/Carousel";
 import { ProductActionTypes } from "../reducers/Products";
 
 const ProductsPageContainer = styled("div")`
@@ -129,6 +129,7 @@ const Products = ({ match }) => {
   const [showAcceptanceModal, setShowAcceptanceModal] = useState(false);
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
   const [selectedSkuId, setSelectedSkuId] = useState("");
+  const [sendButtonPushed, setSendButtonPushed] = useState(true);
 
   useEffect(() => {
     let ignore = false;
@@ -141,28 +142,30 @@ const Products = ({ match }) => {
           productIds.split(/[\s,]+/)
         );
         if (!ignore) {
+          console.log(payload.data)
           dispatch({
             type: ProductActionTypes.FETCH_PRODUCTS_SUCCESS,
             payload: payload.data,
           });
         }
+        setSendButtonPushed(false);
       } catch (error) {
         if (!ignore) {
           dispatch({ type: ProductActionTypes.FETCH_PRODUCTS_ERROR, error });
         }
+        setSendButtonPushed(false);
       }
     }
 
-    if (productIds) {
+    if (productIds && sendButtonPushed) {
       fetchProducts();
-    } else {
+    } else if (!productIds){
       dispatch({ type: ProductActionTypes.SET_PRODUCTS_EMPTY });
     }
-
     return () => {
       ignore = true;
     };
-  }, [merchantCode, productIds]);
+  }, [sendButtonPushed, merchantCode, productIds]);
 
   useEffect(() => {
     const isFirstTime = localStorage.getItem("firstTime");
@@ -190,6 +193,7 @@ const Products = ({ match }) => {
   };
 
   const handleRequest = (merchantCode, productIds) => {
+    setSendButtonPushed(true);
     setMerchantCode(merchantCode);
     setProductIds(productIds);
   };
