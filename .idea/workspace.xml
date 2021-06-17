@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51bf7d2d-6b0d-4cb6-93c5-f340affe1281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChangeThemeModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChangeThemeModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Products.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

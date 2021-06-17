@@ -5,7 +5,7 @@ import ChangeThemeModal from "./ChangeThemeModal";
 import { Link } from "react-router-dom";
 
 const HeaderContainer = styled("div")`
-  height: 10vh;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,8 +18,8 @@ const Logo = styled("div")`
 const Button = styled("button")`
   position: absolute;
   right: 10px;
-  height: 8vh;
-  width: 60px;
+  height: 60pc;
+  width: 90px;
   padding: 0;
   cursor: pointer;
 `;
