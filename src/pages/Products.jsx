@@ -142,7 +142,6 @@ const Products = ({ match }) => {
           productIds.split(/[\s,]+/)
         );
         if (!ignore) {
-          console.log(payload.data)
           dispatch({
             type: ProductActionTypes.FETCH_PRODUCTS_SUCCESS,
             payload: payload.data,
