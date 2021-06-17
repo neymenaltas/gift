@@ -234,6 +234,18 @@ const Products = ({ match }) => {
     );
   };
 
+  const renderCarousel = () => {
+    return (
+      <div>
+        <Carousel
+          activeProductIndex={activeProductIndex}
+          productImages={productImages}
+          changeActiveProduct={changeActiveProduct}
+        />
+      </div>
+    );
+  };
+
   return (
     <ProductsPageContainer>
       {showWelcomeModal && renderWelcomeModal()}
@@ -243,15 +255,10 @@ const Products = ({ match }) => {
 
       {loading && renderLoading()}
 
-      {productImages && productImages.length > 1 && !loading && (
-        <div>
-          <Carousel
-            activeProductIndex={activeProductIndex}
-            productImages={productImages}
-            changeActiveProduct={changeActiveProduct}
-          />
-        </div>
-      )}
+      {productImages &&
+        productImages.length > 1 &&
+        !loading &&
+        renderCarousel()}
 
       {!products.length && loaded && renderNoProductFound()}
 
