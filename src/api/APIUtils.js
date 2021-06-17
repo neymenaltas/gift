@@ -14,7 +14,6 @@ client.defaults.headers["x-smartgift-app-secret"] =
 function responseHandler(response) {
   if (response.config.method === "GET" || "get") {
     if (response.config.url) {
-      console.log("storing in cache");
       cache.store(response.config.url, JSON.stringify(response.data));
     }
   }
@@ -23,7 +22,6 @@ function responseHandler(response) {
 
 function errorHandler(error) {
   if (error.headers.cached === true) {
-    console.log("got cached data in response, serving it directly");
     return Promise.resolve(error);
   }
   return Promise.reject(error);
@@ -33,7 +31,6 @@ function requestHandler(request) {
   if (request.method === "GET" || "get") {
     const checkIsValidResponse = cache.isValid(request.url || "");
     if (checkIsValidResponse.isValid) {
-      console.log("serving cached data");
       request.headers.cached = true;
       request.data = JSON.parse(checkIsValidResponse.value || "{}");
       return Promise.reject(request);

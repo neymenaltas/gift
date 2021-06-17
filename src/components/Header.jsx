@@ -18,8 +18,8 @@ const Logo = styled("div")`
 const Button = styled("button")`
   position: absolute;
   right: 10px;
-  height: 60px;
-  width: 90px;
+  height: 50px;
+  width: 75px;
   padding: 0;
   cursor: pointer;
 `;

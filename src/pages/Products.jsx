@@ -158,20 +158,20 @@ const Products = ({ match }) => {
 
     if (productIds && sendButtonPushed) {
       fetchProducts();
-    } else if (!productIds){
+    } else if (!productIds) {
       dispatch({ type: ProductActionTypes.SET_PRODUCTS_EMPTY });
     }
     return () => {
       ignore = true;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sendButtonPushed, merchantCode, productIds]);
 
   useEffect(() => {
-    const isFirstTime = localStorage.getItem("firstTime");
-    if (isFirstTime || isFirstTime === "false") {
-    } else {
+    const enteredBefore = localStorage.getItem("enteredBefore");
+    if (!enteredBefore) {
       setShowWelcomeModal(true);
-      localStorage.setItem("firstTime", "false");
+      localStorage.setItem("enteredBefore", "false");
     }
   }, []);
 
@@ -197,34 +197,43 @@ const Products = ({ match }) => {
     setProductIds(productIds);
   };
 
+  const renderWelcomeModal = () => {
+    return (
+      <Modal>
+        <WelcomeModal toggleModal={() => setShowWelcomeModal(false)} />
+      </Modal>
+    );
+  };
+
+  const renderAcceptanceModal = () => {
+    return (
+      <Modal>
+        <AcceptanceModal
+          toggleModal={() => setShowAcceptanceModal(false)}
+          selectedSkuId={selectedSkuId}
+        />
+      </Modal>
+    );
+  };
+
+  const renderLoading = () => {
+    return (
+      <ProductArea>
+        <SpinnerArea>
+          <Spinner />
+        </SpinnerArea>
+      </ProductArea>
+    );
+  };
+
   return (
     <ProductsPageContainer>
-      {showWelcomeModal && (
-        <Modal>
-          <WelcomeModal
-            toggleModal={() => setShowWelcomeModal(false)}
-          ></WelcomeModal>
-        </Modal>
-      )}
-
-      {showAcceptanceModal && (
-        <Modal>
-          <AcceptanceModal
-            toggleModal={() => setShowAcceptanceModal(false)}
-            selectedSkuId={selectedSkuId}
-          ></AcceptanceModal>
-        </Modal>
-      )}
+      {showWelcomeModal && renderWelcomeModal()}
+      {showAcceptanceModal && renderAcceptanceModal()}
 
       <InputsArea match={match} handleRequest={handleRequest} />
 
-      {loading && (
-        <ProductArea>
-          <SpinnerArea>
-            <Spinner />
-          </SpinnerArea>
-        </ProductArea>
-      )}
+      {loading && renderLoading()}
 
       {productImages && productImages.length > 1 && !loading && (
         <div>
