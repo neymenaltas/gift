@@ -18,7 +18,7 @@ const Logo = styled("div")`
 const Button = styled("button")`
   position: absolute;
   right: 10px;
-  height: 60pc;
+  height: 60px;
   width: 90px;
   padding: 0;
   cursor: pointer;
