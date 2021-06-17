@@ -12,10 +12,10 @@ import Carousel from "./Carousel";
 import { ProductActionTypes } from "../reducers/Products";
 
 const ProductsPageContainer = styled("div")`
-  height: 90vh;
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 90vh;
 `;
 
 const ProductArea = styled("div")`
@@ -224,11 +224,13 @@ const Products = ({ match }) => {
       )}
 
       {productImages && productImages.length > 1 && !loading && (
-        <Carousel
-          activeProductIndex={activeProductIndex}
-          productImages={productImages}
-          changeActiveProduct={changeActiveProduct}
-        />
+        <div>
+          <Carousel
+            activeProductIndex={activeProductIndex}
+            productImages={productImages}
+            changeActiveProduct={changeActiveProduct}
+          />
+        </div>
       )}
 
       {!products.length && loaded && (
