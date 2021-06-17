@@ -40,7 +40,7 @@ const Icon = styled("i")`
   color: #91a5be;
   transform: rotate(0deg);
   transition: all 0.2s ease-in-out;
-  .icon {
+  &.open {
     transform: rotate(90deg);
   }
 `;
