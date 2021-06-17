@@ -24,7 +24,7 @@ For backend communication those headers must be added in APIUtils.js . I added i
 ## Multiple Product Search
 
 You can use the Product Id(s)'s input field for multiple search adding comma between product codes.
-Alternatively you can search from Url directly like that "http://localhost:3000/{productCode1},{productCode12}"
+Alternatively you can search from url directly like that "http://localhost:3000/{productCode1},{productCode2}"
 
 ## Use Case
 
